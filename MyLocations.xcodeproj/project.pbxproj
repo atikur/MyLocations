@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E01A5036C2007A608E /* AppDelegate.swift */; };
-		4737A0E31A5036C2007A608E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E21A5036C2007A608E /* FirstViewController.swift */; };
+		4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */; };
 		4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E41A5036C2007A608E /* SecondViewController.swift */; };
 		4737A0E81A5036C2007A608E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0E61A5036C2007A608E /* Main.storyboard */; };
 		4737A0EA1A5036C2007A608E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0E91A5036C2007A608E /* Images.xcassets */; };
 		4737A0ED1A5036C2007A608E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0EB1A5036C2007A608E /* LaunchScreen.xib */; };
 		4737A0F91A5036C2007A608E /* MyLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0F81A5036C2007A608E /* MyLocationsTests.swift */; };
+		4737A1031A504622007A608E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4737A1021A504622007A608E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 		4737A0DB1A5036C2007A608E /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4737A0DF1A5036C2007A608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4737A0E01A5036C2007A608E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4737A0E21A5036C2007A608E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		4737A0E41A5036C2007A608E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4737A0E71A5036C2007A608E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4737A0E91A5036C2007A608E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		4737A0F21A5036C2007A608E /* MyLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4737A0F71A5036C2007A608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4737A0F81A5036C2007A608E /* MyLocationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationsTests.swift; sourceTree = "<group>"; };
+		4737A1021A504622007A608E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4737A1031A504622007A608E /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		4737A0D21A5036C2007A608E = {
 			isa = PBXGroup;
 			children = (
+				4737A1021A504622007A608E /* CoreLocation.framework */,
 				4737A0DD1A5036C2007A608E /* MyLocations */,
 				4737A0F51A5036C2007A608E /* MyLocationsTests */,
 				4737A0DC1A5036C2007A608E /* Products */,
@@ -80,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4737A0E01A5036C2007A608E /* AppDelegate.swift */,
-				4737A0E21A5036C2007A608E /* FirstViewController.swift */,
+				4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */,
 				4737A0E41A5036C2007A608E /* SecondViewController.swift */,
 				4737A0E61A5036C2007A608E /* Main.storyboard */,
 				4737A0E91A5036C2007A608E /* Images.xcassets */,
@@ -217,7 +221,7 @@
 			files = (
 				4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */,
 				4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */,
-				4737A0E31A5036C2007A608E /* FirstViewController.swift in Sources */,
+				4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
