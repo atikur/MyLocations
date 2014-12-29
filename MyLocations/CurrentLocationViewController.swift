@@ -28,6 +28,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var performingReverseGeocoding = false
     var lastGeocodingError: NSError?
     
+    var timer: NSTimer?
+    
     @IBAction func getLocation() {
         let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         
@@ -116,14 +118,36 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
+            
+            // setup timer
+            timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("didTimeOut"), userInfo: nil, repeats: false)
         }
     }
     
     func stopLocationManager() {
         if updatingLocation {
+            // invalidate timer if stop button is pressed by user or accurate enough location is 
+            //found within one minute after starting
+            if let timer = timer {
+                timer.invalidate()
+            }
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             updatingLocation = false
+        }
+    }
+    
+    func didTimeOut() {
+        println("*** Time out")
+        
+        // if no valid location found before timeout, stop location manager
+        if location == nil {
+            stopLocationManager()
+            
+            lastLocationError = NSError(domain: "MyLocationsErrorDomain", code: 1, userInfo: nil)
+            
+            updateLabels()
+            configureGetButton()
         }
     }
     
