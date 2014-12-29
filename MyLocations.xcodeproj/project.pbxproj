@@ -15,6 +15,7 @@
 		4737A0ED1A5036C2007A608E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0EB1A5036C2007A608E /* LaunchScreen.xib */; };
 		4737A0F91A5036C2007A608E /* MyLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0F81A5036C2007A608E /* MyLocationsTests.swift */; };
 		4737A1031A504622007A608E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4737A1021A504622007A608E /* CoreLocation.framework */; };
+		47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4737A0F71A5036C2007A608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4737A0F81A5036C2007A608E /* MyLocationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationsTests.swift; sourceTree = "<group>"; };
 		4737A1021A504622007A608E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailsViewController.swift; path = ../LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				4737A0E01A5036C2007A608E /* AppDelegate.swift */,
 				4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */,
+				47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */,
 				4737A0E41A5036C2007A608E /* SecondViewController.swift */,
 				4737A0E61A5036C2007A608E /* Main.storyboard */,
 				4737A0E91A5036C2007A608E /* Images.xcassets */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */,
 				4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */,
 				4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */,
 				4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */,
@@ -413,6 +417,7 @@
 				4737A0FE1A5036C2007A608E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4737A0FF1A5036C2007A608E /* Build configuration list for PBXNativeTarget "MyLocationsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				4737A1011A5036C2007A608E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
