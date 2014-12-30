@@ -25,6 +25,7 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     
     var descriptionText = ""
+    var categoryName = "No Category"
     
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
@@ -38,11 +39,17 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func categoryPickerDidPickCategory(segue: UIStoryboardSegue) {
+        let controller = segue.sourceViewController as CategoryPickerViewController
+        categoryName = controller.selectedCategoryName
+        categoryLabel.text = categoryName
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         descriptionTextView.text = descriptionText
-        categoryLabel.text = ""
+        categoryLabel.text = categoryName
         
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
@@ -54,6 +61,13 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         }
         
         dateLabel.text = formatDate(NSDate())
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PickCategory" {
+            let controller = segue.destinationViewController as CategoryPickerViewController
+            controller.selectedCategoryName = categoryName
+        }
     }
     
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
