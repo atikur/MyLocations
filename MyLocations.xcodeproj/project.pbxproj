@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4713F3371A53CC320034A361 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713F3361A53CC320034A361 /* HudView.swift */; };
 		4713F3391A53D6620034A361 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713F3381A53D6620034A361 /* Functions.swift */; };
+		4713F36E1A541EDB0034A361 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4713F36C1A541EDB0034A361 /* DataModel.xcdatamodeld */; };
+		4713F3701A54232D0034A361 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713F36F1A54232D0034A361 /* Location.swift */; };
 		4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E01A5036C2007A608E /* AppDelegate.swift */; };
 		4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */; };
 		4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E41A5036C2007A608E /* SecondViewController.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		4713F3361A53CC320034A361 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		4713F3381A53D6620034A361 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		4713F36D1A541EDB0034A361 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		4713F36F1A54232D0034A361 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4737A0DB1A5036C2007A608E /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4737A0DF1A5036C2007A608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4737A0E01A5036C2007A608E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				4737A0E01A5036C2007A608E /* AppDelegate.swift */,
 				4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */,
 				47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */,
+				4713F36C1A541EDB0034A361 /* DataModel.xcdatamodeld */,
+				4713F36F1A54232D0034A361 /* Location.swift */,
 				4713F3381A53D6620034A361 /* Functions.swift */,
 				4713F3361A53CC320034A361 /* HudView.swift */,
 				4737A0E41A5036C2007A608E /* SecondViewController.swift */,
@@ -232,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */,
+				4713F36E1A541EDB0034A361 /* DataModel.xcdatamodeld in Sources */,
 				4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */,
 				4713F3371A53CC320034A361 /* HudView.swift in Sources */,
+				4713F3701A54232D0034A361 /* Location.swift in Sources */,
 				4713F3391A53D6620034A361 /* Functions.swift in Sources */,
 				4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */,
 				473F29241A5320E6006BCBF7 /* CategoryPickerViewController.swift in Sources */,
@@ -441,6 +449,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4713F36C1A541EDB0034A361 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4713F36D1A541EDB0034A361 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 4713F36D1A541EDB0034A361 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4737A0D31A5036C2007A608E /* Project object */;
 }
