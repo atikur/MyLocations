@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import CoreLocation
 
 private let dateFormatter: NSDateFormatter = {
@@ -29,6 +30,8 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     @IBAction func done() {
         let hudView = HudView.hudInView(navigationController!.view, animated: true)
