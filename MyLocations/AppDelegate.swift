@@ -7,9 +7,34 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        if let modelURL = NSBundle.mainBundle().URLForResource("DataModel", withExtension: "momd") {
+            let model = NSManagedObjectModel(contentsOfURL: modelURL)
+            let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+            
+            let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+            let documentsDirectory = urls[0] as NSURL
+            let storeURL = documentsDirectory.URLByAppendingPathComponent("DataStore.sqlite")
+            
+            var error: NSError?
+            if let store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: &error){
+                let context = NSManagedObjectContext()
+                context.persistentStoreCoordinator = coordinator
+                return context
+            } else {
+                println("Error adding persistent store at \(storeURL): \(error!)")
+            }
+        } else {
+            println("Could not find data model in app bundle")
+        }
+        
+        abort()
+    }()
 
     var window: UIWindow?
 
