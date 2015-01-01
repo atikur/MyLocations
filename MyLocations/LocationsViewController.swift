@@ -34,6 +34,8 @@ class LocationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         performFetch()
+        
+        navigationItem.rightBarButtonItem = editButtonItem()
     }
     
     func performFetch() {
@@ -57,6 +59,18 @@ class LocationsViewController: UITableViewController {
         cell.configureForLocation(location)
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let location = fetchedResultsController.objectAtIndexPath(indexPath) as Location
+            managedObjectContext.deleteObject(location)
+            
+            var error: NSError?
+            if !managedObjectContext.save(&error) {
+                fatalCoreDateError(error)
+            }
+        }
     }
 
     // MARK: -
