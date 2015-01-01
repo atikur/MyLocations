@@ -62,6 +62,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationController = tabBarViewControllers[1] as UINavigationController
             let locationsViewController = navigationController.viewControllers[0] as LocationsViewController
             locationsViewController.managedObjectContext = managedObjectContext
+            
+            // workaround to fix the core data bug
+            // (how to reproduce bug -
+            //  1. Run the app
+            //  2. Tag a new location
+            //  3. Switch to the Locations tab)
+            let forceTheViewToLoad = locationsViewController.view
         }
         
         // register handler for fatal core data notification
