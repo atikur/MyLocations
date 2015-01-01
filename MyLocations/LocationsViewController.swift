@@ -13,21 +13,48 @@ import CoreLocation
 class LocationsViewController: UITableViewController {
     
     var managedObjectContext: NSManagedObjectContext!
+    var locations = [Location]()
+    
+    override func viewDidLoad() {
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("Location", inManagedObjectContext: managedObjectContext)
+        fetchRequest.entity = entity
+        
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        var error: NSError?
+        let foundObjects = managedObjectContext.executeFetchRequest(fetchRequest, error: &error)
+        
+        if foundObjects == nil {
+            fatalCoreDateError(error)
+            return
+        }
+        
+        locations = foundObjects as [Location]
+    }
     
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return locations.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell") as UITableViewCell
         
+        let location = locations[indexPath.row]
+        
         let descriptionLabel = cell.viewWithTag(100) as UILabel
-        descriptionLabel.text = "If you can see this"
+        descriptionLabel.text = location.locationDescription
         
         let addressLabel = cell.viewWithTag(101) as UILabel
-        addressLabel.text = "Then it works!"
+        if let placemark = location.placemark {
+            addressLabel.text = "\(placemark.subThoroughfare) \(placemark.thoroughfare)," +
+                                "\(placemark.locality)"
+        } else {
+            addressLabel.text = ""
+        }
         
         return cell
     }
