@@ -366,7 +366,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="X8i-mn-rBp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="X8i-mn-rBp" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X8i-mn-rBp" id="BPD-nl-eMf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -387,6 +387,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="1pW-Vq-r6s" id="Phd-1l-0fi"/>
+                                    <outlet property="descriptionLabel" destination="u0Z-RF-vRn" id="PQF-s5-wuM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
