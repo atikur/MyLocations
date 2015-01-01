@@ -51,8 +51,8 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         
         var error: NSError?
         if !managedObjectContext.save(&error) {
-            println("Error: \(error)")
-            abort()
+            fatalCoreDateError(error)
+            return
         }
         
         afterDelay(0.6, {
