@@ -63,6 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let locationsViewController = navigationController.viewControllers[0] as LocationsViewController
             locationsViewController.managedObjectContext = managedObjectContext
             
+            // pass managedObjectContext to MapViewController
+            let mapViewController = tabBarViewControllers[2] as MapViewController
+            mapViewController.managedObjectContext = managedObjectContext
+            
             // workaround to fix the core data bug
             // (how to reproduce bug -
             //  1. Run the app
