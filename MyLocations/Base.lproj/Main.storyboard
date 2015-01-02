@@ -159,6 +159,10 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="F7j-Aj-kYC">
+                                                    <rect key="frame" x="120" y="11" width="144" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -269,10 +273,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="5Xe-kJ-nie" id="7g0-w0-oxh"/>
                         <outlet property="addressLabel" destination="Ukr-vz-bGI" id="vkW-nD-1pJ"/>
                         <outlet property="categoryLabel" destination="7VL-pX-4MX" id="6r4-uz-PxC"/>
                         <outlet property="dateLabel" destination="Ni5-fj-kAu" id="nKH-hq-Nv1"/>
                         <outlet property="descriptionTextView" destination="zRw-xF-aed" id="IFx-Tr-ZLB"/>
+                        <outlet property="imageView" destination="F7j-Aj-kYC" id="o4y-uD-Wfa"/>
                         <outlet property="latitudeLabel" destination="1ci-se-3qa" id="R8o-yP-Vr1"/>
                         <outlet property="longitudeLabel" destination="VdF-R2-2IU" id="xXX-Jk-sj9"/>
                     </connections>
@@ -482,6 +488,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9h7-wZ-LSv"/>
+        <segue reference="0jq-xX-XQa"/>
     </inferredMetricsTieBreakers>
 </document>
