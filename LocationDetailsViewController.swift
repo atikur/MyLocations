@@ -37,6 +37,8 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     
     var date = NSDate()
     
+    var observer: AnyObject!
+    
     var image: UIImage? {
         didSet {
             if let image = image {
@@ -108,6 +110,20 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         addPhotoLabel.hidden = true
     }
     
+    func listenForBackgroundNotification() {
+        observer = NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { [weak self] notification in
+            
+            if let strongSelf = self {
+                // if there is either action sheet or image picker presented as modal view controller, dismiss that
+                if strongSelf.presentedViewController != nil {
+                    strongSelf.dismissViewControllerAnimated(false, completion: nil)
+                }
+            
+                strongSelf.descriptionTextView.resignFirstResponder()
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -132,6 +148,13 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+        
+        listenForBackgroundNotification()
+    }
+    
+    deinit {
+        println("*** deinit \(self)")
+        NSNotificationCenter.defaultCenter().removeObserver(observer)
     }
     
     override func viewWillLayoutSubviews() {
