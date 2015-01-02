@@ -22,9 +22,11 @@ class LocationCell: UITableViewCell {
         }
         
         if let placemark = location.placemark {
-            addressLabel.text =
-                "\(placemark.subThoroughfare) \(placemark.thoroughfare)," +
-                "\(placemark.locality)"
+            var text = ""
+            text.addText(placemark.subThoroughfare)
+            text.addText(placemark.thoroughfare, withSeparator: " ")
+            text.addText(placemark.locality, withSeparator: ", ")
+            addressLabel.text = text
         } else {
             addressLabel.text = String(format: "Lat: %.8f, Long: %.8f", location.latitude, location.longitude)
         }
