@@ -26,6 +26,9 @@
 		47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */; };
 		47D29E431A56FB52001C192F /* UIIamge+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D29E421A56FB51001C192F /* UIIamge+Resize.swift */; };
 		47D29E451A572268001C192F /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D29E441A572268001C192F /* String+AddText.swift */; };
+		47D73E3D1A58681E00E67B13 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D73E3C1A58681E00E67B13 /* MyTabBarController.swift */; };
+		47D73E3F1A5868E600E67B13 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D73E3E1A5868E600E67B13 /* MyNavigationController.swift */; };
+		47D73E411A58699100E67B13 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D73E401A58699100E67B13 /* MyImagePickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailsViewController.swift; path = ../LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		47D29E421A56FB51001C192F /* UIIamge+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIIamge+Resize.swift"; sourceTree = "<group>"; };
 		47D29E441A572268001C192F /* String+AddText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
+		47D73E3C1A58681E00E67B13 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		47D73E3E1A5868E600E67B13 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		47D73E401A58699100E67B13 /* MyImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,9 @@
 				47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */,
 				47AC9DCA1A55079F00DC7195 /* LocationsViewController.swift */,
 				4737A0E61A5036C2007A608E /* Main.storyboard */,
+				47D73E401A58699100E67B13 /* MyImagePickerController.swift */,
+				47D73E3E1A5868E600E67B13 /* MyNavigationController.swift */,
+				47D73E3C1A58681E00E67B13 /* MyTabBarController.swift */,
 				4746B70D1A555C52002D6338 /* MapViewController.swift */,
 				47D29E441A572268001C192F /* String+AddText.swift */,
 				4737A0DE1A5036C2007A608E /* Supporting Files */,
@@ -256,6 +265,8 @@
 				47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */,
 				47D29E431A56FB52001C192F /* UIIamge+Resize.swift in Sources */,
 				47AC9DCB1A55079F00DC7195 /* LocationsViewController.swift in Sources */,
+				47D73E411A58699100E67B13 /* MyImagePickerController.swift in Sources */,
+				47D73E3F1A5868E600E67B13 /* MyNavigationController.swift in Sources */,
 				4713F36E1A541EDB0034A361 /* DataModel.xcdatamodeld in Sources */,
 				4713F3371A53CC320034A361 /* HudView.swift in Sources */,
 				4713F3701A54232D0034A361 /* Location.swift in Sources */,
@@ -266,6 +277,7 @@
 				4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */,
 				473F29241A5320E6006BCBF7 /* CategoryPickerViewController.swift in Sources */,
 				4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */,
+				47D73E3D1A58681E00E67B13 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
