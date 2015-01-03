@@ -80,7 +80,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tag" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Tag" image="Tag" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="addressLabel" destination="BjF-Y7-ORd" id="Kng-ks-PY0"/>
                         <outlet property="getButton" destination="A8l-T1-vzo" id="Xde-BL-VKM"/>
@@ -459,7 +459,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="7bs-WV-oGo"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="7bs-WV-oGo"/>
                     <connections>
                         <outlet property="mapView" destination="RWW-c8-fB6" id="EjO-QF-1Xc"/>
                         <segue destination="Ufq-T9-iEt" kind="modal" identifier="EditLocation" id="9h7-wZ-LSv"/>
@@ -473,7 +473,7 @@
         <scene sceneID="Eb3-Ha-ZKQ">
             <objects>
                 <navigationController id="B9w-S4-gBE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="mTs-Al-RuK"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="Locations" id="mTs-Al-RuK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gCz-tc-3MY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -488,7 +488,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Locations" width="30" height="30"/>
+        <image name="Map" width="30" height="30"/>
+        <image name="Tag" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -496,7 +498,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0jq-xX-XQa"/>
+        <segue reference="9h7-wZ-LSv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.93493385036496346" blue="0.53298927919708028" alpha="1" colorSpace="calibratedRGB"/>
 </document>

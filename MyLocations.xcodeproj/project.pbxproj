@@ -13,7 +13,6 @@
 		4713F3701A54232D0034A361 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713F36F1A54232D0034A361 /* Location.swift */; };
 		4737A0E11A5036C2007A608E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E01A5036C2007A608E /* AppDelegate.swift */; };
 		4737A0E31A5036C2007A608E /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */; };
-		4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4737A0E41A5036C2007A608E /* SecondViewController.swift */; };
 		4737A0E81A5036C2007A608E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0E61A5036C2007A608E /* Main.storyboard */; };
 		4737A0EA1A5036C2007A608E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0E91A5036C2007A608E /* Images.xcassets */; };
 		4737A0ED1A5036C2007A608E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4737A0EB1A5036C2007A608E /* LaunchScreen.xib */; };
@@ -48,7 +47,6 @@
 		4737A0DF1A5036C2007A608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4737A0E01A5036C2007A608E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
-		4737A0E41A5036C2007A608E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4737A0E71A5036C2007A608E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4737A0E91A5036C2007A608E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4737A0EC1A5036C2007A608E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -110,23 +108,22 @@
 			isa = PBXGroup;
 			children = (
 				4737A0E01A5036C2007A608E /* AppDelegate.swift */,
-				47AC9DCC1A5511EC00DC7195 /* LocationCell.swift */,
 				473F29231A5320E6006BCBF7 /* CategoryPickerViewController.swift */,
 				4737A0E21A5036C2007A608E /* CurrentLocationViewController.swift */,
 				4713F36C1A541EDB0034A361 /* DataModel.xcdatamodeld */,
-				4737A0E61A5036C2007A608E /* Main.storyboard */,
-				47D29E441A572268001C192F /* String+AddText.swift */,
-				47D29E421A56FB51001C192F /* UIIamge+Resize.swift */,
 				4713F3381A53D6620034A361 /* Functions.swift */,
 				4713F3361A53CC320034A361 /* HudView.swift */,
 				4737A0E91A5036C2007A608E /* Images.xcassets */,
 				4737A0EB1A5036C2007A608E /* LaunchScreen.xib */,
 				4713F36F1A54232D0034A361 /* Location.swift */,
-				4746B70D1A555C52002D6338 /* MapViewController.swift */,
+				47AC9DCC1A5511EC00DC7195 /* LocationCell.swift */,
 				47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */,
 				47AC9DCA1A55079F00DC7195 /* LocationsViewController.swift */,
-				4737A0E41A5036C2007A608E /* SecondViewController.swift */,
+				4737A0E61A5036C2007A608E /* Main.storyboard */,
+				4746B70D1A555C52002D6338 /* MapViewController.swift */,
+				47D29E441A572268001C192F /* String+AddText.swift */,
 				4737A0DE1A5036C2007A608E /* Supporting Files */,
+				47D29E421A56FB51001C192F /* UIIamge+Resize.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				47D29E431A56FB52001C192F /* UIIamge+Resize.swift in Sources */,
 				47AC9DCB1A55079F00DC7195 /* LocationsViewController.swift in Sources */,
 				4713F36E1A541EDB0034A361 /* DataModel.xcdatamodeld in Sources */,
-				4737A0E51A5036C2007A608E /* SecondViewController.swift in Sources */,
 				4713F3371A53CC320034A361 /* HudView.swift in Sources */,
 				4713F3701A54232D0034A361 /* Location.swift in Sources */,
 				47AC9DCD1A5511EC00DC7195 /* LocationCell.swift in Sources */,
