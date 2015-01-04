@@ -141,6 +141,8 @@ extension MapViewController: MKMapViewDelegate {
                 button.tag = index
             }
             
+            annotationView.tintColor = UIColor(white: 0.0, alpha: 0.5)
+            
             return annotationView
         }
         
