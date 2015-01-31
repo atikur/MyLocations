@@ -21,6 +21,19 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     @IBOutlet weak var latitudeTextLabel: UILabel!
     @IBOutlet weak var longitudeTextLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    var logoVisible = false
+    
+    lazy var logoButton: UIButton = {
+        let button = UIButton.buttonWithType(.Custom) as UIButton
+        button.setBackgroundImage(UIImage(named: "Logo"), forState: .Normal)
+        button.sizeToFit()
+        button.addTarget(self, action: Selector("getLocation"), forControlEvents: .TouchUpInside)
+        button.center.x = CGRectGetMidX(self.view.bounds)
+        button.center.y = 220
+        return button
+    }()
     
     let locationManager = CLLocationManager()
     var location: CLLocation?
@@ -36,6 +49,24 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     var managedObjectContext: NSManagedObjectContext!
     
+    // MARK: - Logo View
+    
+    func showLogoView() {
+        if !logoVisible {
+            logoVisible = true
+            containerView.hidden = true
+            view.addSubview(logoButton)
+        }
+    }
+    
+    func hideLogoView() {
+        logoVisible = false
+        containerView.hidden = false
+        logoButton.removeFromSuperview()
+    }
+    
+    // MARK: -
+    
     @IBAction func getLocation() {
         let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         
@@ -47,6 +78,10 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         if authStatus == .Denied || authStatus == .Restricted {
             showLocationServicesDeniedAlert()
             return
+        }
+        
+        if logoVisible {
+            hideLogoView()
         }
         
         if updatingLocation {
@@ -109,7 +144,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             } else if updatingLocation {
                 statusMessage = "Searching..."
             } else {
-                statusMessage = "Tap 'Get My Location' to Start"
+                statusMessage = ""
+                showLogoView()
             }
             messageLabel.text = statusMessage
             
