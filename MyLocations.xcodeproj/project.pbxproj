@@ -23,6 +23,7 @@
 		4746B70E1A555C52002D6338 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4746B70D1A555C52002D6338 /* MapViewController.swift */; };
 		47AC9DCB1A55079F00DC7195 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC9DCA1A55079F00DC7195 /* LocationsViewController.swift */; };
 		47AC9DCD1A5511EC00DC7195 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC9DCC1A5511EC00DC7195 /* LocationCell.swift */; };
+		47BBA6741A832FF400083AE6 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 47BBA6731A832FF400083AE6 /* Sound.caf */; };
 		47BFF2BE1A51D7E100170413 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */; };
 		47D29E431A56FB52001C192F /* UIIamge+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D29E421A56FB51001C192F /* UIIamge+Resize.swift */; };
 		47D29E451A572268001C192F /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D29E441A572268001C192F /* String+AddText.swift */; };
@@ -62,6 +63,7 @@
 		4746B70D1A555C52002D6338 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		47AC9DCA1A55079F00DC7195 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		47AC9DCC1A5511EC00DC7195 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		47BBA6731A832FF400083AE6 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 		47BFF2BD1A51D7E100170413 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailsViewController.swift; path = ../LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		47D29E421A56FB51001C192F /* UIIamge+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIIamge+Resize.swift"; sourceTree = "<group>"; };
 		47D29E441A572268001C192F /* String+AddText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		4737A0DE1A5036C2007A608E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47BBA6731A832FF400083AE6 /* Sound.caf */,
 				4737A0DF1A5036C2007A608E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -244,6 +247,7 @@
 			files = (
 				4737A0E81A5036C2007A608E /* Main.storyboard in Resources */,
 				4737A0ED1A5036C2007A608E /* LaunchScreen.xib in Resources */,
+				47BBA6741A832FF400083AE6 /* Sound.caf in Resources */,
 				4737A0EA1A5036C2007A608E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
